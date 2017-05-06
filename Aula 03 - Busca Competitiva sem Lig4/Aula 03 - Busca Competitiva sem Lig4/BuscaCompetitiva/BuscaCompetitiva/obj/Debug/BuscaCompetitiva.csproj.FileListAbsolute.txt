@@ -1,0 +1,5 @@
+C:\Users\aluno\Downloads\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\BuscaCompetitiva\BuscaCompetitiva\bin\Debug\BuscaCompetitiva.dll
+C:\Users\aluno\Downloads\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\BuscaCompetitiva\BuscaCompetitiva\bin\Debug\BuscaCompetitiva.pdb
+C:\Users\aluno\Downloads\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\BuscaCompetitiva\BuscaCompetitiva\obj\Debug\BuscaCompetitiva.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Downloads\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\BuscaCompetitiva\BuscaCompetitiva\obj\Debug\BuscaCompetitiva.dll
+C:\Users\aluno\Downloads\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\BuscaCompetitiva\BuscaCompetitiva\obj\Debug\BuscaCompetitiva.pdb
