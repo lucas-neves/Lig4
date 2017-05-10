@@ -14,7 +14,7 @@ namespace Teste {
 
 		private readonly int[,] tabuleiro;
 		// @@@
-		// falta(m) atributo(s) aqui... ;)
+		
 		private readonly int vencedor, vazios;
 		private int jogadorDaVez, hashCode;
 
@@ -22,7 +22,7 @@ namespace Teste {
 			this.tabuleiro = tabuleiro;
 			this.jogadorDaVez = jogadorDaVez;
             vazios = CalcularVazios();
-            //vencedor = CalcularVencedor();
+            vencedor = CalcularVencedor();
         }
 
 		public override string ToString() {
@@ -76,7 +76,7 @@ namespace Teste {
 		}
 
 		public override int GetHashCode() {
-			// aqui é necessário que o hash code já tenha sido calculado!!!
+			
 			if (hashCode == 0) {
 				hashCode = CalcularHashCode();
 			}
@@ -164,30 +164,33 @@ namespace Teste {
                     else
                     {
                         seq++;
+                        if (seq == 4 && primeiro != 0)
+                        {
+                            return primeiro;
+                        }
                     }
                 }
-                if (seq == 4 && primeiro != 0)
-                {
-                    return primeiro;
-                }
+                
             }
 
-            // testa uma diagonal
+            // testa uma diagonal DIREITA PARA ESQUERDA
             
             primeiro = tabuleiro[0, 0];
 
-            for (int linha = 0; linha < LINHAS; linha++)
+            for (int linha = 0; linha < LINHAS -3; linha++)
             {
                 int seq = 1;
                 primeiro = tabuleiro[linha, 0];
+                int aux = linha;
 
                 for (int coluna = 1; coluna < COLUNAS; coluna++)
                 {
-                    if (tabuleiro[linha, coluna] != primeiro)
+                    
+                    if (tabuleiro[aux, coluna] != primeiro)
                     {
                         if (coluna < COLUNAS - 3)
                         {
-                            primeiro = tabuleiro[linha, coluna];
+                            primeiro = tabuleiro[aux, coluna];
                             seq = 1;
                         }
 
@@ -195,12 +198,14 @@ namespace Teste {
                     else
                     {
                         seq++;
+                        if (seq == 4)
+                        {
+                            return primeiro;
+                        }
                     }
+                    aux++;
                 }
-                if (seq == 4)
-                {
-                    return primeiro;
-                }
+                
             }
             
                 // testa a outra diagonal

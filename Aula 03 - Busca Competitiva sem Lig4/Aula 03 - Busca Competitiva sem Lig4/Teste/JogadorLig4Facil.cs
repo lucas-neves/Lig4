@@ -16,7 +16,7 @@ namespace Teste {
 
             for (int linha = EstadoLig4.LINHAS-1; linha >= 0; linha--)
             {
-                for (int coluna = 0; coluna < EstadoTicTacToe.TAMANHO; coluna++)
+                for (int coluna = 0; coluna < EstadoLig4.COLUNAS; coluna++)
                 {
 
                     if (atual.IsCelulaVazia(linha, coluna) == true)

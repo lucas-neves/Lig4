@@ -14,9 +14,9 @@ namespace Teste {
 
 			EstadoLig4 atual = (estadoAtual as EstadoLig4);
 
-			// @@@
+            return Minimax.EfetuarJogada(this, atual, atual.NumeroMaximoDeTurnos);
 
-			return null;
+
 		}
 	}
 }
