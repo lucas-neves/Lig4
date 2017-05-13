@@ -16,10 +16,10 @@ namespace Teste {
 
 			EstadoLig4 atual = (estadoAtual as EstadoLig4);
 
-            for (int linha = EstadoLig4.LINHAS-1; linha>=0; linha--)
-            {                
-                int coluna = random.Next(EstadoLig4.COLUNAS);
+            int coluna = random.Next(EstadoLig4.COLUNAS);
 
+            for (int linha = EstadoLig4.LINHAS-1; linha>=0; linha--)
+            {
                 if (atual.IsCelulaVazia(linha, coluna) == true)
                 {
                     return atual.MarcarCelula(linha, coluna, Id);

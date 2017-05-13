@@ -128,10 +128,9 @@ namespace Teste {
                     {
                         if(coluna < COLUNAS - 3)
                         {
-                            primeiro = tabuleiro[linha, coluna];
-                            seq = 1;
+                            primeiro = tabuleiro[linha, coluna];                            
                         }
-                       
+                        seq = 1;
                     }
                     else
                     {
@@ -156,10 +155,9 @@ namespace Teste {
                     {
                         if (linha < LINHAS - 3)
                         {
-                            primeiro = tabuleiro[linha, coluna];
-                            seq = 1;
+                            primeiro = tabuleiro[linha, coluna];                            
                         }
-
+                        seq = 1;
                     }
                     else
                     {
@@ -173,57 +171,76 @@ namespace Teste {
                 
             }
 
-            // testa uma diagonal DIREITA PARA ESQUERDA
+            // testa uma diagonal Esquerda PARA Direita
             
             primeiro = tabuleiro[0, 0];
 
-            for (int linha = 0; linha < LINHAS -3; linha++)
+            for (int linha = 0; linha < LINHAS - 3; linha++)
             {
-                int seq = 1;
-                primeiro = tabuleiro[linha, 0];
-                int aux = linha;
 
-                for (int coluna = 1; coluna < COLUNAS; coluna++)
+                for (int coluna = 0; coluna < COLUNAS - 3; coluna++)
                 {
-                    
-                    if (tabuleiro[aux, coluna] != primeiro)
+                    int seq = 1;
+                    primeiro = tabuleiro[linha, coluna];
+
+                    for (int i = 0; i < 3; i++)
                     {
-                        if (coluna < COLUNAS - 3)
+                        int auxL = linha + 1, auxC = coluna + 1;
+                        if (tabuleiro[auxL++, auxC++] != primeiro)
                         {
-                            primeiro = tabuleiro[aux, coluna];
+                            primeiro = tabuleiro[auxL, coluna];
                             seq = 1;
                         }
-
-                    }
-                    else
-                    {
                         seq++;
-                        if (seq == 4)
+                        if (seq == 4 && primeiro != 0)
                         {
                             return primeiro;
                         }
                     }
-                    aux++;
-                }
-                
-            }
-            
-                // testa a outra diagonal
-                //primeiro = tabuleiro[0, LINHAS - 1];
-                //for (int d = 1; d < TAMANHO; d++)
-                //{
-                //    if (tabuleiro[d, TAMANHO - 1 - d] != primeiro)
-                //    {
-                //        primeiro = 0;
-                //        break;
-                //    }
-                //}
-                //if (primeiro != 0)
-                //{
-                //    return primeiro;
-                //}
 
-                return 0;
+                }
+
+            }
+
+            // testa uma diagonal Direita PARA Esquerda
+
+            primeiro = tabuleiro[0, 0];
+
+            for (int linha = LINHAS -1; linha > LINHAS - 3; linha--)
+            {
+                int seq = 1;
+                primeiro = tabuleiro[linha, COLUNAS -1];
+                int aux = linha;
+
+                for (int coluna = COLUNAS-1; coluna > 1; coluna--)
+                {
+
+                    if (tabuleiro[aux, coluna] != primeiro)
+                    {
+                        if (coluna > COLUNAS - 3)
+                        {
+                            primeiro = tabuleiro[aux, coluna];
+                        }
+                        seq = 1;
+                    }
+                    else
+                    {
+                        seq++;
+                        if (seq == 4 && primeiro != 0)
+                        {
+                            return primeiro;
+                        }
+                    }
+                    if (aux > 5)
+                    {
+                        aux++;
+                    }
+
+                }
+
+            }
+
+            return 0;
         }
 
         public bool IsCelulaVazia(int linha, int coluna)
