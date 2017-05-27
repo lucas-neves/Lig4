@@ -42,8 +42,8 @@ namespace Teste {
             //	{ X, 0, 0 }
             //}, X);
 
-            Jogador jogadorX = new JogadorLig4Aleatorio(X);
-			Jogador jogadorO = new JogadorLig4Aleatorio(O);
+            Jogador jogadorX = new JogadorLig4Dificil(X);
+			Jogador jogadorO = new JogadorLig4Humano(O);
 
 			// apenas para debug
 			Minimax.UtilizarPodaAlphaBeta = true;

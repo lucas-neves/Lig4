@@ -13,8 +13,7 @@ namespace Teste {
 		public const int COLUNAS = 7;
 
 		private readonly int[,] tabuleiro;
-		// @@@
-		
+				
 		private readonly int vencedor, vazios;
 		private int jogadorDaVez, hashCode;
 
@@ -130,6 +129,10 @@ namespace Teste {
                         {
                             primeiro = tabuleiro[linha, coluna];                            
                         }
+                        else
+                        {
+                            break;
+                        }
                         seq = 1;
                     }
                     else
@@ -157,6 +160,10 @@ namespace Teste {
                         {
                             primeiro = tabuleiro[linha, coluna];                            
                         }
+                        else
+                        {
+                            break;
+                        }
                         seq = 1;
                     }
                     else
@@ -171,9 +178,7 @@ namespace Teste {
                 
             }
 
-            // testa uma diagonal Esquerda PARA Direita
-            
-            primeiro = tabuleiro[0, 0];
+            //// testa uma diagonal Esquerda PARA Direita
 
             for (int linha = 0; linha < LINHAS - 3; linha++)
             {
@@ -183,18 +188,22 @@ namespace Teste {
                     int seq = 1;
                     primeiro = tabuleiro[linha, coluna];
 
-                    for (int i = 0; i < 3; i++)
+                    for (int i = 1; i < 4; i++)
                     {
-                        int auxL = linha + 1, auxC = coluna + 1;
-                        if (tabuleiro[auxL++, auxC++] != primeiro)
+                        int auxL = linha + i, auxC = coluna + i;
+                        if (tabuleiro[auxL, auxC] != primeiro)
                         {
-                            primeiro = tabuleiro[auxL, coluna];
+                            primeiro = tabuleiro[auxL, auxC];
                             seq = 1;
-                        }
-                        seq++;
-                        if (seq == 4 && primeiro != 0)
+                        }                       
+                       
+                        else
                         {
-                            return primeiro;
+                            seq++;
+                            if (seq == 4 && primeiro != 0)
+                            {
+                                return primeiro;
+                            }
                         }
                     }
 
@@ -202,38 +211,33 @@ namespace Teste {
 
             }
 
-            // testa uma diagonal Direita PARA Esquerda
+            //// testa uma diagonal Direita PARA Esquerda
 
-            primeiro = tabuleiro[0, 0];
-
-            for (int linha = LINHAS -1; linha > LINHAS - 3; linha--)
+            for (int linha = 0; linha < LINHAS - 3; linha++)
             {
-                int seq = 1;
-                primeiro = tabuleiro[linha, COLUNAS -1];
-                int aux = linha;
 
-                for (int coluna = COLUNAS-1; coluna > 1; coluna--)
+                for (int coluna = COLUNAS - 1; coluna > 2; coluna--)
                 {
+                    int seq = 1;
+                    primeiro = tabuleiro[linha, coluna];
 
-                    if (tabuleiro[aux, coluna] != primeiro)
+                    for (int i = 1; i < 4; i++)
                     {
-                        if (coluna > COLUNAS - 3)
+                        int auxL = linha + i, auxC = coluna - i;
+                        if (tabuleiro[auxL, auxC] != primeiro)
                         {
-                            primeiro = tabuleiro[aux, coluna];
+                            primeiro = tabuleiro[auxL, auxC];
+                            seq = 1;
                         }
-                        seq = 1;
-                    }
-                    else
-                    {
-                        seq++;
-                        if (seq == 4 && primeiro != 0)
+
+                        else
                         {
-                            return primeiro;
+                            seq++;
+                            if (seq == 4 && primeiro != 0)
+                            {
+                                return primeiro;
+                            }
                         }
-                    }
-                    if (aux > 5)
-                    {
-                        aux++;
                     }
 
                 }
@@ -267,7 +271,7 @@ namespace Teste {
 		public int NumeroMaximoDeTurnos {
 			get {
 				// impossível existirem mais turnos do que células na matriz! ;)
-				return LINHAS * COLUNAS;
+				return 11;
 			}
 		}
 

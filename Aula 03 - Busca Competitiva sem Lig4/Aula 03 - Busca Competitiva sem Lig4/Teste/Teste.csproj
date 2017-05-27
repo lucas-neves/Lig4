@@ -46,6 +46,7 @@
     <Compile Include="JogadorLig4.cs" />
     <Compile Include="JogadorLig4Aleatorio.cs" />
     <Compile Include="JogadorLig4Facil.cs" />
+    <Compile Include="JogadorLig4Humano.cs" />
     <Compile Include="JogadorTicTacToe.cs" />
     <Compile Include="JogadorLig4Dificil.cs" />
     <Compile Include="JogadorTicTacToeAleatorio.cs" />

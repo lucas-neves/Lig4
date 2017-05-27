@@ -18,3 +18,14 @@ C:\Users\aluno\Downloads\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 0
 C:\Users\aluno\Downloads\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\BuscaCompetitiva.dll
 C:\Users\aluno\Downloads\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\BuscaCompetitiva.pdb
 C:\Users\aluno\Downloads\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\Teste\obj\Debug\Teste.csprojResolveAssemblyReference.cache
+E:\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\Teste.exe.config
+E:\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\Teste\obj\Debug\Teste.exe
+E:\Lig4-master\Aula 03 - Busca Competitiva sem Lig4\Aula 03 - Busca Competitiva sem Lig4\Teste\obj\Debug\Teste.pdb
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\Teste.exe.config
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\obj\Debug\Teste.exe
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\obj\Debug\Teste.pdb
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\Teste.exe
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\Teste.pdb
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\BuscaCompetitiva.dll
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\bin\Debug\BuscaCompetitiva.pdb
+C:\Users\aluno\Desktop\Aula 03 - Busca Competitiva sem Lig4\Teste\obj\Debug\Teste.csprojResolveAssemblyReference.cache

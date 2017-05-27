@@ -16,17 +16,21 @@ namespace Teste {
 
 			EstadoLig4 atual = (estadoAtual as EstadoLig4);
 
-            int coluna = random.Next(EstadoLig4.COLUNAS);
-
-            for (int linha = EstadoLig4.LINHAS-1; linha>=0; linha--)
+            for (;;)
             {
-                if (atual.IsCelulaVazia(linha, coluna) == true)
+                int coluna = random.Next(EstadoLig4.COLUNAS);
+                int linha = EstadoLig4.LINHAS - 1;
+                while ( linha >= 0)
                 {
-                    return atual.MarcarCelula(linha, coluna, Id);
+                    if (atual.IsCelulaVazia(linha, coluna) == true)
+                    {
+                        return atual.MarcarCelula(linha, coluna, Id);
+                    }
+                    linha--;
                 }
             }
 
-            return null;
+            
 		}
 	}
 }
